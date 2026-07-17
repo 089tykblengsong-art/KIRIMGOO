@@ -1,1 +1,41 @@
+import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const KirimGoApp());
+}
+
+class KirimGoApp extends StatelessWidget {
+  const KirimGoApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'KIRIMGO',
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("KIRIMGO"),
+        backgroundColor: Colors.amber,
+      ),
+      body: const Center(
+        child: Text(
+          "Selamat Datang di KIRIMGO",
+          style: TextStyle(fontSize: 22),
+        ),
+      ),
+    );
+  }
+}
